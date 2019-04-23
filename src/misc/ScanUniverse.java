@@ -79,17 +79,19 @@ public class ScanUniverse {
 	private static void fillBorderZero(int[][] universe, boolean[][] visited, int m, int n) {
 
 		for (int i = 0; i < n; i++) {
-			if (universe[0][i] == 0) {
+			if (universe[0][i] == 0) 
 				visit(universe, visited, 0, i, m, n, 0);
+			if (universe[m-1][i] == 0) 
 				visit(universe, visited, m - 1, i, m, n, 0);
-			}
+			
+
 		}
 
 		for (int i = 1; i < m - 1; i++) {
-			if (universe[0][i] == 0) {
+			if (universe[i][0] == 0) 
 				visit(universe, visited, i, 0, m, n, 0);
+			if (universe[i][n-1] == 0)
 				visit(universe, visited, i, n - 1, m, n, 0);
-			}
 		}
 	}
 
@@ -114,6 +116,7 @@ public class ScanUniverse {
 
 
 
+// @formatter:off
 /*input/output
  * 
 1st case:
@@ -176,4 +179,4 @@ No of blackHole 1
 
  * 
  * */
- 
+//@formatter:on
