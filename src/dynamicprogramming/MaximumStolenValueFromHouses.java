@@ -25,7 +25,7 @@ public class MaximumStolenValueFromHouses {
 
 		int[] value = new int[arr.length];
 		value[0] = arr[0];
-		value[1] = Math.max(arr[0], arr[0]);
+		value[1] = Math.max(arr[0], arr[1]);
 
 		for (int i = 2; i < value.length; i++) {
 			value[i] = Math.max(arr[i] + value[i - 2], value[i - 1]);
